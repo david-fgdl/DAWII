@@ -1,11 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Rails version: 6.0.3.5
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version: 2.6.6
 
 * System dependencies
 
@@ -15,10 +12,5 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
+Para poder ejecutar la aplicación en localhost, se necesita ejecutar MySQL en el puerto 3306 mediante XAMPP
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
