@@ -23,6 +23,22 @@ class ControlController < ApplicationController
 
     def signup
     end
-    
+
+    def registro
+        @user=User.new({:name => user_params[:name], :email => user_params[:email], :password => user_params[:pwd] })
+        @user.hash_password
+        if @user.save
+            flash[:notice] = "Usuario creado correctamente"
+            redirect_to "/login"
+        else
+            flash[:error] = "Error en la creación del usuario"
+            redirect_to "/signup"
+        end
+    end
+
+    private
+    def user_params
+        params.permit(:name, :email, :pwd, :pwdr)
+      end
   end
-  
+ 

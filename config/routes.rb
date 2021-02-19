@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'logout' => 'control#destroy'
 
   get 'signup' => 'control#signup'
+  post 'registro' => 'control#registro'
 end
