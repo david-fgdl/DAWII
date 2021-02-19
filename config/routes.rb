@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'login' => 'control#admin'
   get 'logout' => 'control#destroy'
 
+  get 'signup' => 'control#signup'
 end

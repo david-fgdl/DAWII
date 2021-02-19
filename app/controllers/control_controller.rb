@@ -21,5 +21,8 @@ class ControlController < ApplicationController
         redirect_to "/login", notice: "Sesión Cerrada!"
     end
 
+    def signup
+    end
+    
   end
   

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'styles.css' %>
+
+    <title>DAW2 - Inscribirse</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1> Crear cuenta </h1>
+    </div>
+     <% if flash[:error] %>
+            <div class="alert alert-danger" role="alert" id="error" class="error">
+                <%= flash[:error] %>                                    
+            </div>
+            <hr>
+        <% end %>
+        
+    <div class="container">
+        <form method="POST" action="../login" accept-charset="UTF-8" role="form" id="adminpedido" name="adminpedido" enctype="multipart/form-data">
+            
+            <!-- Protección CSRF -->
+            <%= token_tag nil %>
+
+            <div class="row">
+                <div class="form-group col-sm-6 " >
+                    <label for="nombre">Nombre</label>
+                    <input type="text" required class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-12 ">
+                    <label for="email">Email</label>
+                    <input type="email" required class="form-control" name="email"  id="email" placeholder="Ingrese su email" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="pwd">Contaseña</label>
+                    <input type="password" required class="form-control" name="email"  id="email" placeholder="********" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="pwdr">Vuelva a introducir contraseña</label>
+                    <input type="password" required class="form-control" name="pwdr"  id="pwdr" placeholder="Vuelva a introducir contraseña" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info">Crear cuenta</button>
+        </form>
+    
+        <div class="text-right">
+            <button type="button" class="btn btn-secondary">
+                <a id="cancelar" href="./login">Cancelar</a>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

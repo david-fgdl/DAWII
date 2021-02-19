@@ -6,3 +6,11 @@
 .jumbotron {
     margin-top: 50px;
 }
+
+#cancelar {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
