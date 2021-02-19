@@ -26,6 +26,13 @@ development:
 test:
   <<: *default
   database: db/test
+  adapter: mysql2     # Motor MySQL
+  encoding: utf8      # Codificación
+  database: productos # Nombre de la Base de Datos
+  username: root      # Usuario de la Base de Datos
+  password:           # Password de la Base de Datos
+  host: 127.0.0.1     # Servidor 
+  port: 3306          # Puerto
 
 production:
   <<: *default
