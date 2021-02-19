@@ -33,4 +33,5 @@ Si es la primera vez en ejecutar el proyecto, es probable que se tengan que inst
 
 * Código usado:
 Partes del código usado ha sido cogido del anterior proyecto de DAW I
+Algunos extractos son las vistas de las páginas o algunos controladores
 Repositorio: https://github.com/mariarf/DulceCapricho_Server
